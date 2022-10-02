@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Kumbh;
+    src: url("./KumbhSans-VariableFont_wght.ttf");
+}
+
+body {
+    height: 100vh;
+    font-family: Kumbh;
+    font-size: 12px;
+    background: linear-gradient(180deg,
+            hsl(273, 75%, 66%),
+            hsl(240, 73%, 65%));
+    color: hsl(238, 29%, 16%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+
+
+.bg-1 {
+    background-color: #fff;
+    background-image: url("./images/bg-pattern-desktop.svg"),
+        url("./images/illustration-woman-online-desktop.svg");
+    background-size: 636px, contain;
+    background-repeat: no-repeat;
+    background-position-x: -322px, -60px;
+    background-position-y: -170px, 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.img {
+    position: relative;
+    left: -105px;
+}
+
+.bg-2 {
+    background-color: #fff;
+    padding: 30px !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.accordion {
+    width: 90%;
+    margin: 20px;
+    background: #fff;
+}
+
+.accordion-tab>label {
+    background: white;
+    line-height: 24px;
+    position: relative;
+    display: block;
+    padding: 12px 5px;
+    cursor: pointer;
+    border-top: 1px solid hsl(240, 5%, 91%);
+}
+
+.accordion-tab>label>img {
+    position: absolute;
+    left: 95%;
+    top: 23px;
+    transition: transform .3s;
+}
+
+.accordion-tab>.accordion-toggle:checked~label>img {
+    transform: rotate(180deg);
+}
+
+.accordion-tab > .accordion-toggle:checked~label {
+    font-weight: 700;
+}
+
+.accordion-tab:hover > label {
+    color: hsl(14, 88%, 65%);
+}
+
+.accordion-tab:first-of-type>label {
+    border-top: 0;
+}
+
+.accordion-tab:last-of-type>label {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.accordion-tab>.accordion-content {
+    max-height: 0;
+    transition: all .2s;
+    overflow: hidden;
+}
+
+.accordion-tab>.accordion-toggle:checked~.accordion-content {
+    max-height: 100vh;
+    padding: 5px;
+}
+
+.accordion-tab>.accordion-toggle {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width:1199px) {
+    .bg-1 {
+        background-image: url("./images/bg-pattern-desktop.svg"),
+            url("./images/illustration-woman-online-desktop.svg");
+        background-size: 636px, contain;
+        background-repeat: no-repeat;
+        background-position-x: -322px, -60px;
+        background-position-y: -170px, 50px;
+    }
+}
+
+@media (max-width:991px) {
+    .bg-1 {
+        background-image: url("./images/bg-pattern-desktop.svg"),
+            url("./images/illustration-woman-online-desktop.svg");
+        background-size: 636px, contain;
+        background-repeat: no-repeat;
+        background-position-x: -322px, -23px;
+        background-position-y: -170px, 85px;
+    }
+}
+
+@media (max-width:767px) {
+    .accordion{
+        margin-left: 0!important;
+    }
+    .container {
+        margin-top: 200px !important;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    .bg-1 {
+        background-color: #fff;
+        background-image: url("./images/bg-pattern-mobile.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 0;
+        z-index: -1;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    h3 {
+        margin-left: 40%;
+        font-weight: 700;
+    }
+
+    .bg-2 {
+        padding-top: 0 !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .mobile {
+        display: block;
+        position: relative;
+        top: -145px;
+    }
+
+    .img {
+        display: none;
+    }
+}
+
+@media (max-width:400px){
+    .mobile {
+        display: block;
+        position: relative;
+        top: -100px;
+    }
+}
